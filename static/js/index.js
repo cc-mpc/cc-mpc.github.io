@@ -1,12 +1,12 @@
 window.HELP_IMPROVE_VIDEOJS = false;
 
 var INTERP_BASE = "./static/interpolation/stacked";
-var NUM_INTERP_FRAMES = 1354;
+var NUM_INTERP_FRAMES = 365;
 
 var interp_images = [];
 function preloadInterpolationImages() {
   for (var i = 0; i < NUM_INTERP_FRAMES; i++) {
-    var path = INTERP_BASE + '/ccmpc_tracking' + String(i).padStart(4, '0') + '.jpg';
+    var path = INTERP_BASE + '/comparison' + String(i).padStart(3, '0') + '.jpg';
     interp_images[i] = new Image();
     interp_images[i].src = path;
   }
