@@ -60,6 +60,7 @@
             <span class="author-block">
               <a href="https://mfe7.github.io/">Michael Everett</a><sup>1</sup>,
             </span>
+            and
             <span class="author-block">
               <a href="https://robot.neu.edu/author/taskin-padir/">Taskin Padir</a><sup>1</sup>
             </span>
@@ -74,7 +75,7 @@
             <div class="publication-links">
               <!-- PDF Link. -->
               <span class="link-block">
-                <a href="https://arxiv.org/pdf/2402.18065"
+                <a href="./static/assets/Chance_Constrained_Convex_MPC_for_Quadruped_Locomotion.pdf"
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
                       <i class="fas fa-file-pdf"></i>
@@ -103,7 +104,7 @@
               </span>
               <!-- Code Link. -->
               <span class="link-block">
-                <a href="https://github.com/RIVeR-LAB/quadruped_mpc"
+                <a href="https://github.com/RIVeR-Lab/Chance-Constrained-Quadruped-MPC"
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
                       <i class="fab fa-github"></i>
@@ -262,7 +263,7 @@
       <div class="column is-four-fifths">
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
-          <p>Recent advancements in quadrupedal locomotion have highlighted the complexities of maintaining stability and performance in diverse and challenging environments. To address some of these issues, we model the variability in payload and terrain as distributions of parametric uncertainties and additive disturbances in the single rigid body dynamics (SRBD) model. By solving a stochastic optimal control problem with chance-constrained friction cone constraints, we determine the ground reaction forces required for dynamic stability using convex quadratic programming. This approach achieves an update rate of approximately 500 Hz, comparable to deterministic linear Model Predictive Control (LMPC). In 1000 Monte Carlo simulations, our method outperformed LMPC and MPC with hand-tuned safety margins in maintaining stability over uneven terrain, reducing foot slippage, and accurately tracking the center of mass trajectory, even with additional payloads. Hardware experiments on the Unitree Go1 robot showed that, with the same controller parameters, the robot successfully performed blind locomotion across varied terrains while carrying unknown loads exceeding 50% of its body weight. </p>
+          <p>Recent advances in quadrupedal locomotion have focused on improving stability and performance across diverse environments. However, existing methods often lack adequate safety analysis and struggle to adapt to varying payloads and complex terrains, typically requiring extensive tuning. To overcome these challenges, we propose a Chance-Constrained Model Predictive Control (CCMPC) framework that explicitly models payload and terrain variability as distributions of parametric and additive disturbances within the single rigid body dynamics (SRBD) model. Our approach ensures safe and consistent performance under uncertain dynamics by expressing the model's friction cone constraints, which define the feasible set of ground reaction forces, as chance constraints. Moreover, we solve the resulting stochastic control problem using a computationally efficient quadratic programming formulation. Extensive Monte Carlo simulations of quadrupedal locomotion across varying payloads and complex terrains demonstrate that CCMPC significantly outperforms two competitive benchmarks: Linear MPC (LMPC) and MPC with hand-tuned safety margins to maintain stability, reduce foot slippage, and track the center of mass. Hardware experiments on the Unitree Go1 robot show successful locomotion across various indoor and outdoor terrains with unknown loads exceeding 50% of the robot's body weight, despite no additional parameter tuning. </p>
         </div>
       </div>
     </div>
@@ -294,7 +295,7 @@
         
         <div class="content has-text-justified">
           <p>
-            The below interactive demo shows time v/s COM Height plot for quadruped running LMPC and SMPC. It is evident that when quadruped is subjected to uncertain mass (6kgs) in this case, CCMPC is able to track height constantly whereas LMPC fails.
+            The interactive demo below presents a time versus COM height plot for a quadruped running LMPC and CCMPC. Under an uncertain 6 kg payload, CCMPC consistently maintains COM height, while LMPC fails.
           </p>
         </div>
         <div class="columns is-vcentered interpolation-panel">
@@ -330,10 +331,10 @@
   <div class="container">
     <div class="content has-text-centered">
       <a class="icon-link"
-         href="./static/assets/ccmpc.pdf">
+         href="./static/assets/Chance_Constrained_Convex_MPC_for_Quadruped_Locomotion.pdf">
         <i class="fas fa-file-pdf"></i>
       </a>
-      <a class="icon-link" href="https://github.com/RIVeR-LAB/quadruped_mpc" class="external-link" disabled>
+      <a class="icon-link" href="https://github.com/RIVeR-Lab/Chance-Constrained-Quadruped-MPC" class="external-link" disabled>
         <i class="fab fa-github"></i>
       </a>
     </div>
